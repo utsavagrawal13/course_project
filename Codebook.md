@@ -66,14 +66,16 @@ Introduction
 ================================================
 The script run_analysis.R performs the 5 steps described in the course project's definition.
 
-1) First,we combine create training and test dataset.
-2) Only those columns with the mean and standard deviation measures are taken from the whole dataset. After extracting these columns, they are given the correct names, taken from  
-   features.txt.
-3) As activity data is addressed with values 1:6, we take the activity names and IDs from activity_labels.txt and they are substituted in the dataset.
-4) Finally, we generate a new dataset with all the average measures for each subject and activity type (30 subjects * 6 activities = 180 rows). The output file is called  
-   averages_data.txt, and uploaded to this repository.
 
-The tidy.txt columns reports out average of the selected feature
+1) First we import features.txt and take only those columns with the mean and standard deviation these are stored in "featuresrequired".    After extracting these columns, they are given the correct and descriptive names stored in "featuresrequired.names"
+
+2) Than create and  training ("training_combined_data") and test("test_combined_data") dataset. Than we combine these two dataset in "complete_data".
+
+3) As activity data is addressed with values 1:6, we take the activity names and IDs from activity_labels.txt and they are substituted in the dataset.
+
+4) Finally, we generate a new dataset with all the average measures for each subject and activity type (30 subjects * 6 activities = 180 rows). The output file is called  tidy.txt, and uploaded to this repository.
+
+The tidy.txt columns reports out average of the selected feature:
 
 timeBodyAccelerometerMeanX,
 timeBodyAccelerometerMeanY,
